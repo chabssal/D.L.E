@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ArrayAdapter adapter;
     ArrayList<Datas> wordBook = new ArrayList<>();
     ArrayList<String> arrayList = new ArrayList<>();
+    String highwords[]={"tradition","patriotism","religious","conscience"};
+    String highmeans[]={"전통, 전설","애국심","종교","양심"};
     Button addBtn;
     EditText editText;
     String text;
@@ -49,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), WordlList.class);
+                intent.putExtra("arraylist",wordBook);
                 intent.putExtra("name", wordBook.get(i).name);
-                intent.putExtra("int", i);
                 startActivity(intent);
             }
         });
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (text.equals(""))
                     Toast.makeText(MainActivity.this, "아무것도 입력 되지 않음", Toast.LENGTH_SHORT).show();
                 else {
-                    wordBook.add(new Datas(text, null, null, null));
+                    wordBook.add(new Datas(text, null, null));
                     arrayList.add(text);
                     editText.setText(null);
                     text = "";
@@ -108,11 +110,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         } else {
             //앱 처음 킬때 실행
-            wordBook.add(new Datas("고등 영어 단어", "https://quizlet.com/379058595/real-life-flash-cards/",
-                    "TermText notranslate lang-en", "TermText notranslate lang-ko"));
-            wordBook.add(new Datas("실행활 영어 단어", null, null, null));
-            wordBook.add(new Datas("수능 영어 단어", null, null, null));
-            wordBook.add(new Datas("토익 영어 단어", null, null, null));
+            wordBook.add(new Datas("고등 영어 단어", highwords,highmeans));//https://www.studystack.com/flashcard-329986
+            wordBook.add(new Datas("실행활 영어 단어", null, null));
+            wordBook.add(new Datas("수능 영어 단어", null, null));
+            wordBook.add(new Datas("토익 영어 단어", null, null));
             for (int i = 0; i < wordBook.size(); i++) {
                 arrayList.add(wordBook.get(i).name);
             }
