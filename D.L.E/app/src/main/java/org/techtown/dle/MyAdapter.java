@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MyAdapter extends  RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    ArrayList<Datas> items;
+    ArrayList<String> items;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textview;
@@ -21,7 +21,7 @@ public class MyAdapter extends  RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
     }
 
-    public MyAdapter(ArrayList<Datas> items) {
+    public MyAdapter(ArrayList<String> items) {
         this.items= items;
     }
 
@@ -36,7 +36,7 @@ public class MyAdapter extends  RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
     @Override
     public void onBindViewHolder(final @NonNull MyAdapter.ViewHolder vh, int i) {
-        vh.textview.setText("#"+items.get(i).word);
+        vh.textview.setText("#"+items.get(i));
     }
 
     @Override

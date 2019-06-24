@@ -1,17 +1,21 @@
 package org.techtown.dle;
 
-import android.net.Uri;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class Datas{
+public class Datas implements Serializable {
     String name;
-    String url=null,urlWord=null,urlMean=null;
-    ArrayList<String> word,mean;
-    public Datas(String name, String url,String urlWord,String urlMean){
+    String[] words;
+    String[] means;
+    ArrayList<String> dataWord,dataMean;
+    public Datas(String name, String words[],String means[]){
         this.name=name;
-        this.url=url;
-        this.urlWord=urlWord;
-        this.urlMean=urlMean;
+        this.words = words;
+        this.means= means;
+        dataWord=new ArrayList<>(Arrays.asList(words));
+        dataMean=new ArrayList<>(Arrays.asList(means));
     }
+
 }
