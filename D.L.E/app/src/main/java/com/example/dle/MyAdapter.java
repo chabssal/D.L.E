@@ -1,4 +1,4 @@
-package org.techtown.dle;
+package com.example.dle;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -28,15 +28,15 @@ public class MyAdapter extends  RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @NonNull
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_recycler, viewGroup, false);
-        MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v);
 
         return vh;
     }
     @Override
-    public void onBindViewHolder(final @NonNull MyAdapter.ViewHolder vh, int i) {
-        vh.textview.setText("#"+items.get(i));
+    public void onBindViewHolder(final @NonNull ViewHolder vh, int i) {
+        vh.textview.setText(items.get(i));
     }
 
     @Override

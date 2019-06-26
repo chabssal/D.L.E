@@ -6,22 +6,22 @@
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/set"
-            android:layout_gravity="right"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:maxHeight="50dp"
-            android:maxWidth="50dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/set"
+        android:layout_gravity="right"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="D.L.E"
-            android:textSize="50dp"
-            android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D.L.E"
+        android:textSize="50dp"
+        android:layout_gravity="center"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

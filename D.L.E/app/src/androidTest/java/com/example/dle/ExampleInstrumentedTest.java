@@ -1,4 +1,4 @@
-package org.techtown.dle;
+package com.example.dle;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("org.techtown.dle", appContext.getPackageName());
+        assertEquals("com.example.dle", appContext.getPackageName());
     }
 }
