@@ -1,4 +1,4 @@
-package org.techtown.dle;
+package com.example.dle;
 
 import org.junit.Test;
 
